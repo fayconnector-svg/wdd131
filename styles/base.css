@@ -1,0 +1,204 @@
+/* Color Palette & Global Reset */
+:root {
+    --primary-color: #1e4f73;
+    --secondary-color: #2b2b2b;
+    --accent-color: #ffeb3b;
+    --bg-color: #f4f7f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-radius: 8px;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation Styling */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444444;
+    color: var(--accent-color);
+}
+
+/* Main Layout & Cards */
+main {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #111111;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #dcdcdc;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+}
+
+/* About Me Card Internal Layout */
+.bio-content {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.bio-content img {
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.location-section {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.location-section h3 {
+    text-align: center;
+    margin-bottom: 0.25rem;
+    color: var(--secondary-color);
+}
+
+.location-section hr {
+    border: 0;
+    height: 1px;
+    background: #cccccc;
+    margin-bottom: 1rem;
+}
+
+.location-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    border: 1px solid #ccc;
+}
+
+figcaption {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #555555;
+    margin-top: 0.2rem;
+}
+
+/* Web Dev Resources List */
+.card ul {
+    list-style-type: disc;
+    padding: 1.5rem 2rem;
+}
+
+.card li {
+    margin-bottom: 0.6rem;
+}
+
+.card a {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.card a:hover {
+    color: #002552;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    color: var(--accent-color);
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments for mobile viewports */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .bio-content, .location-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
