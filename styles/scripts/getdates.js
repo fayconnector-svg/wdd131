@@ -1,11 +1,12 @@
-// Dynamically populate current year in footer
-const currentYearSpan = document.getElementById("currentyear");
+// Dynamically set the current year in the footer
+const currentYearSpan = document.querySelector("#currentyear");
 if (currentYearSpan) {
-    currentYearSpan.textContent = new Date().getFullYear();
+    const today = new Date();
+    currentYearSpan.textContent = today.getFullYear();
 }
 
-// Dynamically populate document last modified date in footer
-const lastModifiedParagraph = document.getElementById("lastModified");
+// Dynamically set the last modified date of the document
+const lastModifiedParagraph = document.querySelector("#lastModified");
 if (lastModifiedParagraph) {
     lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
 }
