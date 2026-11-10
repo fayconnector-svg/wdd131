@@ -1,0 +1,27 @@
+@media screen and (min-width: 768px) {
+    /* Hide hamburger button on desktop */
+    #menu {
+        display: none;
+    }
+
+    /* Reset nav for desktop view */
+    nav {
+        position: static;
+        display: block;
+        background: transparent;
+        width: auto;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation li a {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Desktop Grid layout: 3 columns */
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
