@@ -1,20 +1,16 @@
-// Hamburger Menu Toggle
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('nav');
+// Hamburger menu toggle logic
+const mainNav = document.querySelector('.navigation');
+const hamburgerButton = document.querySelector('#menu');
 
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
+hamburgerButton.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    hamburgerButton.classList.toggle('open');
 });
 
-// Dynamic Footer Year and Last Modification
-const currentYearSpan = document.querySelector("#currentyear");
-if (currentYearSpan) {
-    const today = new Date();
-    currentYearSpan.textContent = today.getFullYear();
-}
+// Footer year dynamic output
+const currentYearSpan = document.querySelector('#currentyear');
+currentYearSpan.textContent = new Date().getFullYear();
 
-const lastModifiedParagraph = document.querySelector("#lastModified");
-if (lastModifiedParagraph) {
-    lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
-}
+// Footer last modified dynamic output
+const lastModifiedParagraph = document.querySelector('#lastModified');
+lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;

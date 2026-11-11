@@ -1,27 +1,42 @@
-@media screen and (min-width: 768px) {
-    /* Hide hamburger button on desktop */
+@media screen and (min-width: 640px) {
     #menu {
         display: none;
     }
 
-    /* Reset nav for desktop view */
-    nav {
-        position: static;
-        display: block;
-        background: transparent;
-        width: auto;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
     }
 
-    .navigation {
+    .header-content {
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
         flex-direction: row;
     }
 
-    .navigation li a {
-        padding: 0.5rem 1rem;
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
     }
 
-    /* Desktop Grid layout: 3 columns */
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
+    .navigation li {
+        width: auto;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
