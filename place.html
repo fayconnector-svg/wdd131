@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page: Nigeria</title>
+    <meta name="description" content="WDD 131 Country Page assignment showcasing Nigeria - geography, climate, and key facts.">
+    <meta name="author" content="Fayconnector">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+    <!-- Link JavaScript with defer -->
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main class="container">
+        <!-- Hero Image using srcset / picture -->
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/hero-large.webp">
+                <img src="images/hero-small.webp" alt="Scenic view of Nigeria landscape" width="1000" height="500">
+            </picture>
+        </div>
+
+        <section class="card data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><span>Area:</span> 923,768 sq km</li>
+                <li><span>Population:</span> 223,800,000</li>
+                <li><span>Capital:</span> Abuja</li>
+                <li><span>Languages:</span> English, Yoruba, Igbo, Hausa</li>
+                <li><span>Currency:</span> Nigerian Naira (NGN)</li>
+                <li><span>Time Zone:</span> WAT (UTC+1)</li>
+                <li><span>Calling Code:</span> +234</li>
+                <li><span>Internet TLD:</span> .ng</li>
+            </ul>
+        </section>
+
+        <section class="card weather-card">
+            <!-- Weather Heading with pseudo-element requirement for wider view -->
+            <h2 class="weather-heading">Weather</h2>
+            <div class="weather-content">
+                <!-- SVG Icon for Mobile View -->
+                <img src="images/weather-icon.svg" alt="Weather Icon" class="mobile-weather-icon">
+                <p><span>Temperature:</span> <span id="temp">30</span> °C</p>
+                <p><span>Conditions:</span> Partly Cloudy</p>
+                <p><span>Wind:</span> <span id="wind">10</span> km/h</p>
+                <p><span>Wind Chill:</span> <span id="windchill">N/A</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Fayehun Feranmi | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #008751; /* Green representing Nigeria's flag */
+    --secondary-color: #ffffff;
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    padding: 0.5ns 0;
+    border-bottom: 1px solid #eee;
+}
+
+.card li span {
+    font-weight: bold;
+}
+
+/* Mobile Weather Icon Styling */
+.mobile-weather-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Wider View Layout (Media Query) */
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "hero hero"
+            "data weather";
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+
+    .data-card {
+        grid-area: data;
+    }
+
+    .weather-card {
+        grid-area: weather;
+    }
+
+    /* Hide SVG icon in wider view and use pseudo-element emoticon ⛅ */
+    .mobile-weather-icon {
+        display: none;
+    }
+
+    .weather-heading::after {
+        content: " ⛅";
+    }
+}
